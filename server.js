@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-const sequelize = require(".config/connection");
+const sequelize = require("./config/connection");
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync().then(() => {
